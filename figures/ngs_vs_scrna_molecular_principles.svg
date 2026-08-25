@@ -1,0 +1,283 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1120" viewBox="0 0 1800 1120" role="img" aria-labelledby="title desc">
+  <title id="title">Molecular principles of bulk NGS and droplet-based single-cell RNA sequencing</title>
+  <desc id="desc">A comparison of bulk RNA sequencing and droplet-based single-cell RNA sequencing, followed by the shared sequencing-by-synthesis layer.</desc>
+  <defs>
+    <style>
+      text { font-family: Arial, Helvetica, sans-serif; fill: #17202a; }
+      .title { font-size: 34px; font-weight: 700; }
+      .subtitle { font-size: 17px; fill: #52606d; }
+      .panel-title { font-size: 24px; font-weight: 700; }
+      .panel-label { font-size: 25px; font-weight: 700; }
+      .step-title { font-size: 16px; font-weight: 700; }
+      .body { font-size: 14px; }
+      .small { font-size: 12px; fill: #52606d; }
+      .tiny { font-size: 11px; fill: #52606d; }
+      .card { fill: #ffffff; stroke: #cbd5e1; stroke-width: 1.6; }
+      .bulk-card { fill: #f7fbff; stroke: #8eb7d8; stroke-width: 1.7; }
+      .single-card { fill: #fbf9ff; stroke: #aa97d3; stroke-width: 1.7; }
+      .shared-card { fill: #f8fafc; stroke: #94a3b8; stroke-width: 1.7; }
+      .arrow { fill: none; stroke: #52606d; stroke-width: 2.5; marker-end: url(#arrow); }
+      .arrow-purple { fill: none; stroke: #7059a6; stroke-width: 2.5; marker-end: url(#arrow-purple); }
+      .arrow-blue { fill: none; stroke: #3578a8; stroke-width: 2.5; marker-end: url(#arrow-blue); }
+      .rna { fill: none; stroke: #2a9d8f; stroke-width: 4; stroke-linecap: round; }
+      .dna { fill: none; stroke: #3973ac; stroke-width: 3.5; stroke-linecap: round; }
+      .accent { fill: #e78b45; }
+    </style>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#52606d"/>
+    </marker>
+    <marker id="arrow-blue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#3578a8"/>
+    </marker>
+    <marker id="arrow-purple" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#7059a6"/>
+    </marker>
+    <linearGradient id="bulkHeader" x1="0" x2="1">
+      <stop offset="0" stop-color="#d8eefc"/>
+      <stop offset="1" stop-color="#eef8fd"/>
+    </linearGradient>
+    <linearGradient id="singleHeader" x1="0" x2="1">
+      <stop offset="0" stop-color="#e8e0f7"/>
+      <stop offset="1" stop-color="#f5f1fb"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1800" height="1120" fill="#ffffff"/>
+  <text class="title" x="900" y="52" text-anchor="middle">Molecular principles of bulk NGS and droplet-based scRNA-seq</text>
+  <text class="subtitle" x="900" y="82" text-anchor="middle">Single-cell resolution is created before sequencing by partition-specific and molecule-specific barcoding</text>
+
+  <!-- Panel A -->
+  <rect x="45" y="115" width="820" height="690" rx="22" fill="#fbfdff" stroke="#9dbbd3" stroke-width="2"/>
+  <path d="M45 137 Q45 115 67 115 H843 Q865 115 865 137 V180 H45 Z" fill="url(#bulkHeader)"/>
+  <text class="panel-label" x="70" y="158">a</text>
+  <text class="panel-title" x="110" y="158">Conventional bulk RNA-seq</text>
+  <text class="small" x="110" y="179">Sample identity is retained; cell-of-origin information is pooled</text>
+
+  <rect class="bulk-card" x="75" y="220" width="135" height="240" rx="16"/>
+  <text class="step-title" x="142" y="250" text-anchor="middle">Cell population</text>
+  <circle cx="115" cy="315" r="28" fill="#9ccbe6" stroke="#3973ac" stroke-width="2"/>
+  <circle cx="166" cy="302" r="24" fill="#a9d7cf" stroke="#2a9d8f" stroke-width="2"/>
+  <circle cx="151" cy="357" r="27" fill="#d8b9e8" stroke="#7059a6" stroke-width="2"/>
+  <circle cx="110" cy="315" r="8" fill="#ffffff" opacity="0.8"/>
+  <circle cx="164" cy="300" r="7" fill="#ffffff" opacity="0.8"/>
+  <circle cx="150" cy="355" r="8" fill="#ffffff" opacity="0.8"/>
+  <text class="body" x="142" y="413" text-anchor="middle">Many cells</text>
+  <text class="small" x="142" y="435" text-anchor="middle">one tissue or sample</text>
+
+  <path class="arrow-blue" d="M215 340 H238"/>
+
+  <rect class="bulk-card" x="243" y="220" width="135" height="240" rx="16"/>
+  <text class="step-title" x="310" y="250" text-anchor="middle">RNA extraction</text>
+  <path class="rna" d="M275 300 C292 278, 304 325, 321 300 S350 322, 356 294"/>
+  <path class="rna" d="M275 335 C292 313, 304 360, 321 335 S350 357, 356 329"/>
+  <path class="rna" d="M275 370 C292 348, 304 395, 321 370 S350 392, 356 364"/>
+  <text class="body" x="310" y="413" text-anchor="middle">RNA molecules</text>
+  <text class="small" x="310" y="435" text-anchor="middle">mixed before tagging</text>
+
+  <path class="arrow-blue" d="M383 340 H406"/>
+
+  <rect class="bulk-card" x="411" y="220" width="135" height="240" rx="16"/>
+  <text class="step-title" x="478" y="250" text-anchor="middle">cDNA library</text>
+  <line class="dna" x1="438" y1="300" x2="519" y2="300"/>
+  <line class="dna" x1="438" y1="334" x2="519" y2="334"/>
+  <line class="dna" x1="438" y1="368" x2="519" y2="368"/>
+  <rect x="428" y="291" width="12" height="18" rx="2" fill="#e78b45"/>
+  <rect x="519" y="291" width="12" height="18" rx="2" fill="#e78b45"/>
+  <rect x="428" y="325" width="12" height="18" rx="2" fill="#e78b45"/>
+  <rect x="519" y="325" width="12" height="18" rx="2" fill="#e78b45"/>
+  <rect x="428" y="359" width="12" height="18" rx="2" fill="#e78b45"/>
+  <rect x="519" y="359" width="12" height="18" rx="2" fill="#e78b45"/>
+  <text class="body" x="478" y="413" text-anchor="middle">Adapters + index</text>
+  <text class="small" x="478" y="435" text-anchor="middle">sample-level identity</text>
+
+  <path class="arrow-blue" d="M551 340 H574"/>
+
+  <rect class="bulk-card" x="579" y="220" width="135" height="240" rx="16"/>
+  <text class="step-title" x="646" y="250" text-anchor="middle">Short-read NGS</text>
+  <rect x="606" y="288" width="80" height="102" rx="8" fill="#e8f1f8" stroke="#3973ac" stroke-width="2"/>
+  <g fill="#3973ac">
+    <circle cx="622" cy="305" r="4"/><circle cx="646" cy="305" r="4"/><circle cx="670" cy="305" r="4"/>
+    <circle cx="622" cy="330" r="4"/><circle cx="646" cy="330" r="4"/><circle cx="670" cy="330" r="4"/>
+    <circle cx="622" cy="355" r="4"/><circle cx="646" cy="355" r="4"/><circle cx="670" cy="355" r="4"/>
+    <circle cx="622" cy="380" r="4"/><circle cx="646" cy="380" r="4"/><circle cx="670" cy="380" r="4"/>
+  </g>
+  <text class="body" x="646" y="413" text-anchor="middle">Parallel reads</text>
+  <text class="small" x="646" y="435" text-anchor="middle">FASTQ output</text>
+
+  <path class="arrow-blue" d="M719 340 H742"/>
+
+  <rect class="bulk-card" x="747" y="220" width="88" height="240" rx="16"/>
+  <text class="step-title" x="791" y="245" text-anchor="middle">Sample</text>
+  <text class="step-title" x="791" y="264" text-anchor="middle">profile</text>
+  <rect x="769" y="292" width="44" height="98" fill="#ffffff" stroke="#3973ac" stroke-width="1.5"/>
+  <rect x="775" y="363" width="7" height="21" fill="#98c1d9"/>
+  <rect x="787" y="330" width="7" height="54" fill="#5f9fc8"/>
+  <rect x="799" y="308" width="7" height="76" fill="#3973ac"/>
+  <text class="body" x="791" y="413" text-anchor="middle">Genes</text>
+  <text class="small" x="791" y="433" text-anchor="middle">× samples</text>
+
+  <rect x="76" y="510" width="758" height="228" rx="16" fill="#eef7fc" stroke="#9dbbd3" stroke-width="1.4"/>
+  <text class="step-title" x="100" y="545">Interpretation</text>
+  <text class="body" x="100" y="578">Each read can be assigned to a multiplexed sample, but not to an individual cell.</text>
+  <text class="body" x="100" y="610">The measured abundance is a population average influenced by both expression</text>
+  <text class="body" x="100" y="634">within cell types and the relative abundance of those cell types.</text>
+  <rect x="100" y="664" width="220" height="43" rx="10" fill="#3973ac"/>
+  <text x="210" y="691" text-anchor="middle" font-size="16" font-weight="700" fill="#ffffff">Gene × sample matrix</text>
+  <text class="small" x="345" y="681">High sensitivity for sample-level comparisons</text>
+  <text class="small" x="345" y="703">Cellular heterogeneity is not directly retained</text>
+
+  <!-- Panel B -->
+  <rect x="895" y="115" width="860" height="690" rx="22" fill="#fdfcff" stroke="#b0a1d0" stroke-width="2"/>
+  <path d="M895 137 Q895 115 917 115 H1733 Q1755 115 1755 137 V180 H895 Z" fill="url(#singleHeader)"/>
+  <text class="panel-label" x="920" y="158">b</text>
+  <text class="panel-title" x="960" y="158">Droplet-based single-cell RNA-seq</text>
+  <text class="small" x="960" y="179">Cellular and molecular identities are encoded before pooling</text>
+
+  <rect class="single-card" x="925" y="220" width="135" height="240" rx="16"/>
+  <text class="step-title" x="992" y="250" text-anchor="middle">Single cells</text>
+  <circle cx="972" cy="316" r="26" fill="#a9d7cf" stroke="#2a9d8f" stroke-width="2"/>
+  <circle cx="1015" cy="300" r="23" fill="#d8b9e8" stroke="#7059a6" stroke-width="2"/>
+  <circle cx="1012" cy="355" r="25" fill="#9ccbe6" stroke="#3973ac" stroke-width="2"/>
+  <circle cx="970" cy="315" r="7" fill="#ffffff" opacity="0.8"/>
+  <circle cx="1014" cy="300" r="7" fill="#ffffff" opacity="0.8"/>
+  <circle cx="1010" cy="355" r="7" fill="#ffffff" opacity="0.8"/>
+  <text class="body" x="992" y="413" text-anchor="middle">Dissociation</text>
+  <text class="small" x="992" y="435" text-anchor="middle">cell suspension</text>
+
+  <path class="arrow-purple" d="M1065 340 H1088"/>
+
+  <rect class="single-card" x="1093" y="220" width="135" height="240" rx="16"/>
+  <text class="step-title" x="1160" y="250" text-anchor="middle">Partitioning</text>
+  <circle cx="1160" cy="331" r="56" fill="#e8f5f2" stroke="#2a9d8f" stroke-width="2.5"/>
+  <circle cx="1142" cy="323" r="19" fill="#a9d7cf" stroke="#2a9d8f" stroke-width="2"/>
+  <circle cx="1180" cy="345" r="16" fill="#e8c36a" stroke="#b78613" stroke-width="2"/>
+  <g stroke="#b78613" stroke-width="1.2">
+    <line x1="1180" y1="326" x2="1180" y2="316"/><line x1="1196" y1="335" x2="1205" y2="329"/>
+    <line x1="1199" y1="350" x2="1210" y2="352"/><line x1="1164" y1="350" x2="1155" y2="358"/>
+  </g>
+  <text class="body" x="1160" y="413" text-anchor="middle">Cell + bead</text>
+  <text class="small" x="1160" y="435" text-anchor="middle">in one droplet</text>
+
+  <path class="arrow-purple" d="M1233 340 H1256"/>
+
+  <rect class="single-card" x="1261" y="220" width="135" height="240" rx="16"/>
+  <text class="step-title" x="1328" y="250" text-anchor="middle">Barcoded cDNA</text>
+  <path class="rna" d="M1292 290 C1304 275, 1318 309, 1330 291 S1352 311, 1363 289"/>
+  <line class="dna" x1="1290" y1="330" x2="1367" y2="330"/>
+  <rect x="1281" y="320" width="22" height="20" rx="3" fill="#7059a6"/>
+  <rect x="1303" y="320" width="18" height="20" rx="3" fill="#e78b45"/>
+  <line class="dna" x1="1290" y1="370" x2="1367" y2="370"/>
+  <rect x="1281" y="360" width="22" height="20" rx="3" fill="#7059a6"/>
+  <rect x="1303" y="360" width="18" height="20" rx="3" fill="#f1b27f"/>
+  <text class="body" x="1328" y="413" text-anchor="middle">Cell barcode</text>
+  <text class="small" x="1328" y="435" text-anchor="middle">+ UMI</text>
+
+  <path class="arrow-purple" d="M1401 340 H1424"/>
+
+  <rect class="single-card" x="1429" y="220" width="135" height="240" rx="16"/>
+  <text class="step-title" x="1496" y="250" text-anchor="middle">Pool + sequence</text>
+  <rect x="1456" y="288" width="80" height="102" rx="8" fill="#f0ebf8" stroke="#7059a6" stroke-width="2"/>
+  <g>
+    <circle cx="1472" cy="305" r="4" fill="#7059a6"/><circle cx="1496" cy="305" r="4" fill="#e78b45"/><circle cx="1520" cy="305" r="4" fill="#3973ac"/>
+    <circle cx="1472" cy="330" r="4" fill="#7059a6"/><circle cx="1496" cy="330" r="4" fill="#e78b45"/><circle cx="1520" cy="330" r="4" fill="#3973ac"/>
+    <circle cx="1472" cy="355" r="4" fill="#7059a6"/><circle cx="1496" cy="355" r="4" fill="#e78b45"/><circle cx="1520" cy="355" r="4" fill="#3973ac"/>
+    <circle cx="1472" cy="380" r="4" fill="#7059a6"/><circle cx="1496" cy="380" r="4" fill="#e78b45"/><circle cx="1520" cy="380" r="4" fill="#3973ac"/>
+  </g>
+  <text class="body" x="1496" y="413" text-anchor="middle">R1: CB + UMI</text>
+  <text class="small" x="1496" y="435" text-anchor="middle">R2: transcript cDNA</text>
+
+  <path class="arrow-purple" d="M1569 340 H1592"/>
+
+  <rect class="single-card" x="1597" y="220" width="128" height="240" rx="16"/>
+  <text class="step-title" x="1661" y="245" text-anchor="middle">Cell-resolved</text>
+  <text class="step-title" x="1661" y="264" text-anchor="middle">matrix</text>
+  <g transform="translate(1623 288)">
+    <rect width="76" height="102" fill="#ffffff" stroke="#7059a6" stroke-width="1.5"/>
+    <g fill="#ddd4ee">
+      <rect x="4" y="5" width="13" height="13"/><rect x="21" y="5" width="13" height="13"/><rect x="55" y="5" width="13" height="13"/>
+      <rect x="21" y="22" width="13" height="13"/><rect x="38" y="22" width="13" height="13"/>
+      <rect x="4" y="39" width="13" height="13"/><rect x="55" y="39" width="13" height="13"/>
+      <rect x="38" y="56" width="13" height="13"/><rect x="55" y="56" width="13" height="13"/>
+      <rect x="4" y="73" width="13" height="13"/><rect x="21" y="73" width="13" height="13"/>
+    </g>
+    <g fill="#7059a6">
+      <rect x="38" y="5" width="13" height="13"/><rect x="4" y="22" width="13" height="13"/><rect x="55" y="22" width="13" height="13"/>
+      <rect x="21" y="39" width="13" height="13"/><rect x="38" y="39" width="13" height="13"/>
+      <rect x="4" y="56" width="13" height="13"/><rect x="21" y="56" width="13" height="13"/>
+      <rect x="38" y="73" width="13" height="13"/><rect x="55" y="73" width="13" height="13"/>
+    </g>
+  </g>
+  <text class="body" x="1661" y="413" text-anchor="middle">Genes × cells</text>
+  <text class="small" x="1661" y="435" text-anchor="middle">UMI counts</text>
+
+  <rect x="926" y="510" width="798" height="228" rx="16" fill="#f5f1fb" stroke="#b0a1d0" stroke-width="1.4"/>
+  <text class="step-title" x="950" y="542">Typical bead-linked capture oligonucleotide</text>
+  <rect x="950" y="568" width="170" height="42" rx="7" fill="#8aa9c4"/>
+  <rect x="1120" y="568" width="190" height="42" rx="7" fill="#7059a6"/>
+  <rect x="1310" y="568" width="120" height="42" rx="7" fill="#e78b45"/>
+  <rect x="1430" y="568" width="170" height="42" rx="7" fill="#2a9d8f"/>
+  <text x="1035" y="594" text-anchor="middle" font-size="14" font-weight="700" fill="#ffffff">constant / adapter</text>
+  <text x="1215" y="594" text-anchor="middle" font-size="14" font-weight="700" fill="#ffffff">cell barcode</text>
+  <text x="1370" y="594" text-anchor="middle" font-size="14" font-weight="700" fill="#ffffff">UMI</text>
+  <text x="1515" y="594" text-anchor="middle" font-size="14" font-weight="700" fill="#ffffff">oligo(dT)</text>
+  <path class="rna" d="M1605 589 C1624 567, 1640 612, 1660 589 S1695 610, 1710 584"/>
+  <text class="tiny" x="1200" y="630" text-anchor="middle">same bead → same cellular identity</text>
+  <text class="tiny" x="1370" y="630" text-anchor="middle">original molecule identity</text>
+  <text class="tiny" x="1600" y="630" text-anchor="middle">poly(A) RNA capture</text>
+  <rect x="950" y="658" width="230" height="45" rx="10" fill="#7059a6"/>
+  <text x="1065" y="686" text-anchor="middle" font-size="16" font-weight="700" fill="#ffffff">Gene × cell UMI matrix</text>
+  <text class="small" x="1204" y="675">Barcodes reconstruct cellular origin after pooling.</text>
+  <text class="small" x="1204" y="697">UMI collapsing reduces amplification-derived overcounting.</text>
+  <text class="tiny" x="1698" y="721" text-anchor="end">Conceptual 3′ droplet workflow; exact read structure is chemistry-dependent.</text>
+
+  <!-- Shared layer -->
+  <rect x="45" y="835" width="1710" height="235" rx="22" fill="#f8fafc" stroke="#94a3b8" stroke-width="2"/>
+  <text class="panel-label" x="70" y="878">c</text>
+  <text class="panel-title" x="110" y="878">Shared short-read sequencing layer</text>
+  <text class="small" x="110" y="900">Library molecules are decoded in parallel; barcode design determines what biological identities can be reconstructed</text>
+
+  <rect class="shared-card" x="90" y="930" width="270" height="100" rx="14"/>
+  <text class="step-title" x="225" y="955" text-anchor="middle">1. Adapter-bearing library</text>
+  <line class="dna" x1="140" y1="986" x2="310" y2="986"/>
+  <rect x="126" y="976" width="18" height="20" rx="3" fill="#e78b45"/>
+  <rect x="310" y="976" width="18" height="20" rx="3" fill="#e78b45"/>
+  <text class="tiny" x="225" y="1015" text-anchor="middle">DNA or RNA-derived cDNA fragments</text>
+
+  <path class="arrow" d="M365 980 H405"/>
+
+  <rect class="shared-card" x="410" y="930" width="270" height="100" rx="14"/>
+  <text class="step-title" x="545" y="955" text-anchor="middle">2. Flow-cell attachment</text>
+  <line x1="450" y1="1005" x2="640" y2="1005" stroke="#94a3b8" stroke-width="4"/>
+  <path class="dna" d="M495 1005 Q510 968 535 995"/>
+  <path class="dna" d="M560 1005 Q575 968 600 995"/>
+  <text class="tiny" x="545" y="1021" text-anchor="middle">adapter–oligonucleotide hybridization</text>
+
+  <path class="arrow" d="M685 980 H725"/>
+
+  <rect class="shared-card" x="730" y="930" width="270" height="100" rx="14"/>
+  <text class="step-title" x="865" y="955" text-anchor="middle">3. Local clonal amplification</text>
+  <g fill="#3973ac">
+    <circle cx="815" cy="985" r="5"/><circle cx="833" cy="975" r="5"/><circle cx="850" cy="992" r="5"/>
+    <circle cx="870" cy="978" r="5"/><circle cx="889" cy="992" r="5"/><circle cx="908" cy="978" r="5"/>
+  </g>
+  <text class="tiny" x="865" y="1021" text-anchor="middle">one library molecule → one signal cluster</text>
+
+  <path class="arrow" d="M1005 980 H1045"/>
+
+  <rect class="shared-card" x="1050" y="930" width="320" height="100" rx="14"/>
+  <text class="step-title" x="1210" y="955" text-anchor="middle">4. Sequencing by synthesis</text>
+  <g>
+    <circle cx="1135" cy="985" r="10" fill="#4e79a7"/><circle cx="1185" cy="985" r="10" fill="#59a14f"/>
+    <circle cx="1235" cy="985" r="10" fill="#f28e2b"/><circle cx="1285" cy="985" r="10" fill="#af7aa1"/>
+  </g>
+  <text class="tiny" x="1210" y="1021" text-anchor="middle">incorporate → image → cleave → repeat</text>
+
+  <path class="arrow" d="M1375 980 H1415"/>
+
+  <rect class="shared-card" x="1420" y="930" width="290" height="100" rx="14"/>
+  <text class="step-title" x="1565" y="955" text-anchor="middle">5. Digital sequence output</text>
+  <text x="1565" y="992" text-anchor="middle" font-size="20" font-weight="700" fill="#3973ac">A C G T G A …</text>
+  <text class="tiny" x="1565" y="1021" text-anchor="middle">base calls + quality scores → FASTQ</text>
+
+  <text class="tiny" x="900" y="1100" text-anchor="middle">Conceptual schematic — no quantitative experimental data are shown.</text>
+</svg>
